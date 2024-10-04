@@ -3775,11 +3775,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5583479970083751046, guid: 1d2b600c67e8ec941a7b4dd682af4629, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.2748837
+      value: -3.28
       objectReference: {fileID: 0}
     - target: {fileID: 5583479970083751046, guid: 1d2b600c67e8ec941a7b4dd682af4629, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7996626
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 5583479970083751046, guid: 1d2b600c67e8ec941a7b4dd682af4629, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4518,7 +4518,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1573007371}
   - component: {fileID: 1573007372}
-  m_Layer: 0
+  - component: {fileID: 1573007373}
+  m_Layer: 8
   m_Name: SnowMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4534,11 +4535,11 @@ Transform:
   m_GameObject: {fileID: 1573007370}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.791649, y: 3.8999858, z: 0.06462168}
+  m_LocalPosition: {x: 6.822, y: 1.557, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1979903415}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1573007372
 SpriteRenderer:
@@ -4592,6 +4593,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1573007373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573007370}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.010060072}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.93, y: 2.1}
+    newSize: {x: 1.93, y: 2.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.93, y: 2.0798798}
+  m_EdgeRadius: 0
 --- !u!1 &1582349186
 GameObject:
   m_ObjectHideFlags: 0
@@ -5763,7 +5809,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1573007371}
   - {fileID: 1959756111}
   - {fileID: 1305657062}
   - {fileID: 2102440654}
@@ -6818,6 +6863,10 @@ PrefabInstance:
       propertyPath: collectSound
       value: 
       objectReference: {fileID: 1331755856}
+    - target: {fileID: 624147197599091908, guid: e71d5d7617b7a86418a6dd15a92af57e, type: 3}
+      propertyPath: finishLayerNumber
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4105647705025700970, guid: e71d5d7617b7a86418a6dd15a92af57e, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -6908,3 +6957,4 @@ SceneRoots:
   - {fileID: 1881100454}
   - {fileID: 643849324}
   - {fileID: 1147451239}
+  - {fileID: 1573007371}

@@ -13,6 +13,7 @@ public class Stats : MonoBehaviour
 
     [SerializeField] private int collectLayerNumber; // The layer number for collectible items (e.g., Coins).
     [SerializeField] private int hurtLayerNumber;    // The layer number for damaging objects (e.g., Obstacles).
+    [SerializeField] private int finishLayerNumber;    // The layer number for final destination.
 
     [SerializeField] private AudioSource bgSound; // The background sound that plays during the game.
     [SerializeField] private AudioSource hitSound; // The sound that plays when the player takes damage.
@@ -64,6 +65,10 @@ public class Stats : MonoBehaviour
         {
             HandleHurt(); // Handle taking damage.
         }
+        if (other.gameObject.layer == finishLayerNumber)
+        {
+            HandleFinish(); // Handle finishing the game.
+        }
     }
 
     /// <summary>
@@ -98,6 +103,13 @@ public class Stats : MonoBehaviour
             bgSound.Stop(); // Stop the background sound.
             print("Game Over!"); // Print game over message.
             Destroy(gameObject); // Remove the player object from the game.
+        }
+    }
+
+    private void HandleFinish(){
+        if (pointCounter == maxPoints)
+        {
+            print("YOU WON!");
         }
     }
 }
